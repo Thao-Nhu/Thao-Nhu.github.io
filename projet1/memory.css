@@ -1,0 +1,144 @@
+body {
+  background: url(background.jpeg);
+  background-size:cover;
+}
+
+.playground{
+  display:flex;
+  justify-content: center;
+  align-content:flex-end;
+}
+
+.memorySideNote{
+  margin-right:100px;
+  display:none;
+}
+
+.memorySideNote > img{
+  width:500px;
+}
+
+@media (min-width:900px) {
+  .memorySideNote {
+  display:block;
+  }
+}
+
+.message {
+  display:flex;
+  justify-content: center;
+}
+
+@media (min-width:900px) {
+  .message {
+  margin-top:15px;
+  margin-bottom:15px;
+  }
+}
+
+.message > ul {
+  display:inline-block;
+  padding-left:20px;
+  margin-top:10px;
+  margin-bottom:10px;
+  font-family:"brush script mt";
+  font-size:1.3em;
+}
+
+@media (min-width:900px) {
+  .message > ul {
+  font-size:1.55em;
+  }
+}
+
+h1{
+  text-align:center;
+  font-size:1.2em;
+  margin-top:15px;
+  margin-bottom:10px;
+  font-family:Optima, sans-serif;
+}
+
+@media (min-width:900px) {
+  h1 {
+    font-size:2.4em;
+  }
+}
+
+.square {
+  width:3.3em;
+  height:3.3em;
+  margin:0;
+  border:1px #A9A9A9 solid;
+ }
+
+ @media (min-width:900px) {
+  .square {
+    width:6em;
+    height:6em;
+  }
+ }
+
+.grey{
+ background:grey;
+}
+
+.row {
+  display:flex;
+  margin:0;
+  justify-content:center;
+ }
+
+.congrats {
+  display:flex;
+  margin:0;
+  justify-content:center;
+ }
+
+ @media (min-width:900px) {
+  img {
+    height:600px;
+    width:600px;
+  }
+ }
+.buttons {
+  display:flex;
+  justify-content:center;
+}
+body button {
+  font-size: 1em;
+  background-color: #A9A9A9;
+  color: #fff;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 5px;
+  margin: 10px;
+  display:block;
+  font-family:Optima, sans-serif;
+}
+
+/*#start-button{
+  display:none;
+}*/
+
+@media (min-width:900px) {
+  body button {
+    font-size:2em;
+    margin:20px;
+  }
+ }
+.bigsquare{
+  margin-top:15px;
+  margin-bottom:15px;
+  text-align:center;
+}
+
+.bigsquare > img {
+  max-width:100%;
+}
+
+.pink{
+  background:url(squarebackground.jpeg);
+  background-size: cover;
+ }
+
