@@ -22,18 +22,25 @@
   </div>
 </div>
 
-<div class="title">
-  <h2>Training on Power BI</h2>
-</div>
+<div><h2>GET A COST ESTIMATE FOR YOUR PROJECT</h2></div>
 
-<div class="detail">
-  <ul>
-    <li>connect to your data source</li>
-    <li>transform your data using Power Query</li>
-    <li>add KPIs using the DAX language</li>
-    <li>create insightful and dynamic visualizations</li>
-    <li>create custom tooltips</li>
-    <li>what-if functionality</li>
-    <li>advanced slicers: change measures with a slicer</li>
-  </ul>
-</div>
+<form action="/estimate" method="POST">
+  <p>
+    <label>
+      Project name:
+      <input type="text" name="projectName">
+    </label>
+  </p>
+
+  <p>
+    <label>
+      Project description:
+      <textarea name="projectDescription"></textarea>
+      
+    </label>
+  </p>
+
+  <p>
+    <button>Get estimate</button>
+  </p>
+</form>

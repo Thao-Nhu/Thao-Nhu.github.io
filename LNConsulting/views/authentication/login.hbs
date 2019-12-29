@@ -22,18 +22,38 @@
   </div>
 </div>
 
-<div class="title">
-  <h2>Training on Power BI</h2>
+<div class="form">
+We are looking forward to working with you ! 
+  {{#if estimateErrorMessage}}
+  <div class="error-message">{{estimateErrorMessage}}</div>
+  {{/if}}
+
+  {{#if accountErrorMessage}}
+  <div class="error-message">{{accountErrorMessage}}</div>
+  {{/if}}  
+
+<form action="/login" method="post">
+  <p>
+    <label>
+      Company name:
+      <input type="text" name="username">
+    </label>
+  </p>
+
+  <p>
+    <label>
+      Password:
+      <input type="password" name="password">
+    </label>
+  </p>
+
+  {{#if errorMessage}}
+  <div class="error-message">{{errorMessage}}</div>
+  {{/if}}
+
+
+  <button type="submit">Login</button>
+</form>
 </div>
 
-<div class="detail">
-  <ul>
-    <li>connect to your data source</li>
-    <li>transform your data using Power Query</li>
-    <li>add KPIs using the DAX language</li>
-    <li>create insightful and dynamic visualizations</li>
-    <li>create custom tooltips</li>
-    <li>what-if functionality</li>
-    <li>advanced slicers: change measures with a slicer</li>
-  </ul>
-</div>
+<div class="signupmessage">You don't have yet an account with us. Please <a href="/signup">SIGN UP</a></div>

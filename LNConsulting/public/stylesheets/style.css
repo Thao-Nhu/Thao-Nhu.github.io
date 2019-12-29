@@ -78,4 +78,34 @@ a {
 .dropdown:hover .dropdown-content {
   display: block; }
 
+.form {
+  margin-top: 30px;
+  font-size: 20px; }
+
+.form form {
+  margin-top: 30px; }
+
+input {
+  font-size: 20px; }
+
+button {
+  margin-top: 20px;
+  font-size: 20px;
+  width: 100px; }
+
+.signupmessage {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: bold; }
+
+.signupmessage a {
+  text-decoration: underline; }
+
+.error-message {
+  color: red; }
+
+.welcome_Message_after_Loggin {
+  font-size: 20px;
+  margin-bottom: 20px; }
+
 /*# sourceMappingURL=style.css.map */
