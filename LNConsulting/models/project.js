@@ -3,6 +3,7 @@ const Schema   = mongoose.Schema;
 
 const ProjectSchema = Schema({
   project_name: String,
+  project_description: String,
   company_id: {type: Schema.Types.ObjectId, ref: 'User'},
   start_date: Date,
   end_date:Date,

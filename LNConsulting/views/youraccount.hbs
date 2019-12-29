@@ -24,14 +24,14 @@
 
 <h1>Welcome {{username}}</h1>
 <ul>
-  <li>
   {{#each projects}}
+  <li>
     <div>
-      <p>Project Name{{project_name}}</p>
-      <p>Status:{{status}}</p>
+      <p>Project Name: {{project_name}}</p>
+      <p>Status: {{status}}</p>
     </div>
   {{else}}
     <p>You don't have any project yet with us</p>
-  {{/each}}
   </li>
+  {{/each}}
 </ul>

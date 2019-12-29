@@ -29,21 +29,6 @@ router.post('/estimate', function (req, res, next) {
     .catch(next);
 });
 
-router.get('/youraccount', (req, res, next) => {
-  if (!req.user) {
-    res.render('authentication/login',{accountErrorMessage: 'Please log in to see your account'});
-    return;
-  }
 
-  Project.find().then(function(projects){
-    console.log("My projects in the database are",projects)
-    res.render('youraccount', {
-      projects:projects,
-      username: req.user.username
-    });
-  }).catch( err => console.error(err));
-  
-
-});
 
 module.exports = router;

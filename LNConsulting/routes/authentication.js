@@ -67,7 +67,17 @@ router.post("/signup", (req, res, next) => {
 });
 
 router.get('/login', (req, res) => {
-  res.render('authentication/login', { message: req.flash('error')});
+  if (req.user) {
+    Project.find().then(function(projects){
+      console.log("My projects in the database are",projects)
+      res.render('youraccount', {
+        projects:projects,
+        username: req.user.username
+      });
+    }).catch( err => console.error(err));
+  } else {
+    res.render('authentication/login', { message: req.flash('error')});
+  } 
   //console.log('errormessage',req.flash('error'))
 });
 
