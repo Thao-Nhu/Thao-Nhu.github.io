@@ -78,21 +78,60 @@ a {
 .dropdown:hover .dropdown-content {
   display: block; }
 
-.form {
+/*Formatting of forms-Start*/
+.form-field {
+  border: 1px solid;
+  border-color: dimgray;
+  border-radius: 30px;
+  padding: 30px;
+  width: 600px;
+  margin: 0 auto;
   margin-top: 30px;
+  box-shadow: inset 0px 0px 15px dimgray;
   font-size: 20px; }
 
-.form form {
-  margin-top: 30px; }
+.form-field * {
+  box-sizing: border-box; }
+
+.flex-outer {
+  list-style-type: none;
+  padding: 0; }
+
+.flex-outer li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; }
+
+.flex-outer {
+  max-width: 600px;
+  margin: 0 auto; }
+
+.flex-outer > li:not(:last-child) {
+  margin-bottom: 20px; }
+
+.flex-outer > li > label,
+.flex-outer li p {
+  flex: 1 0 120px;
+  max-width: 220px; }
+
+.flex-outer > li > label + * {
+  flex: 1 0 220px; }
 
 input {
   font-size: 20px; }
 
-button {
-  margin-top: 20px;
-  font-size: 20px;
-  width: 100px; }
+.flex-outer li button {
+  margin-left: auto;
+  padding: 8px 16px;
+  border: none;
+  background: #333;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+  border-radius: 2px;
+  font-size: 16px; }
 
+/*Formatting of forms-End*/
 .signupmessage {
   margin-top: 20px;
   font-size: 20px;
@@ -102,10 +141,40 @@ button {
   text-decoration: underline; }
 
 .error-message {
-  color: red; }
+  color: #9b2735; }
 
 .welcome_Message_after_Loggin {
   font-size: 20px;
+  margin-bottom: 20px; }
+
+.detail {
+  display: flex; }
+
+.detail .comment {
+  width: 500px;
+  margin: 0 auto;
+  font-size: 18px; }
+
+.lessons {
+  display: flex;
+  justify-content: space-evenly; }
+
+.lesson {
+  padding: 30px;
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px; }
+
+.lesson-title {
+  background-color: #1f1e1e;
+  color: white;
+  height: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.lesson ol li {
   margin-bottom: 20px; }
 
 /*# sourceMappingURL=style.css.map */

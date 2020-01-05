@@ -22,38 +22,43 @@
   </div>
 </div>
 
-<div class="form">
-We are looking forward to working with you ! 
-  {{#if estimateErrorMessage}}
-  <div class="error-message">{{estimateErrorMessage}}</div>
-  {{/if}}
-
-  {{#if accountErrorMessage}}
-  <div class="error-message">{{accountErrorMessage}}</div>
-  {{/if}}  
-
-<form action="/login" method="post">
+<div class="form-field">
+  We are looking forward to working with you ! 
   <p>
-    <label>
-      Company name:
-      <input type="text" name="username">
-    </label>
+    {{#if estimateErrorMessage}}
+    <div class="error-message">{{estimateErrorMessage}}</div>
+    {{/if}}
+
+    {{#if accountErrorMessage}}
+    <div class="error-message">{{accountErrorMessage}}</div>
+    {{/if}}  
   </p>
 
-  <p>
-    <label>
-      Password:
-      <input type="password" name="password">
-    </label>
-  </p>
+  <form action="/login" method="post">
+    <ul class="flex-outer">
+      <li>
+        <label for="username">Company name</label>
+        <input type="text" name="username" placeholder="Your company name">
+      </li>
 
-  {{#if errorMessage}}
-  <div class="error-message">{{errorMessage}}</div>
-  {{/if}}
+      <li>
+        <label for="password">Password</label>
+        <input type="password" name="password" placeholder="Your password"> 
+      </li>
+
+      <li>
+        <button type="submit">Login</button>
+      </li>
+
+      <li>
+        {{#if errorMessage}}
+        <div class="error-message">{{errorMessage}}</div>
+        {{/if}}
+      </li>
+      
+    </ul>  
+  </form>
 
 
-  <button type="submit">Login</button>
-</form>
+  <div class="signupmessage">You don't have yet an account with us. Please <a href="/signup">SIGN UP</a></div>
 </div>
-
-<div class="signupmessage">You don't have yet an account with us. Please <a href="/signup">SIGN UP</a></div>

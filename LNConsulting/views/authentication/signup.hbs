@@ -22,41 +22,39 @@
   </div>
 </div>
 
-<div class="form">
-Thank you for signing up with us
-<form action="/signup" method="post">
-  <p>
-    <label>
-      Company name:
-      <input type="text" name="username">
-    </label>
-  </p>
+<div class="form-field">
+  <p>Thank you for signing up with us</p>
+  <form action="/signup" method="post">
+    <ul class="flex-outer">
+      <li>
+        <label for="username">Company name</label>
+        <input type="text" name="username"> 
+      </li>
 
-  <p>
-    <label>
-      Email:
-      <input type="text" name="email">
-    </label>
-  </p>
+      <li>
+        <label for="email">Email</label>
+        <input type="text" name="email">
+      </li>
 
-  <p>
-    <label>
-      Password:
-      <input type="password" name="password">
-    </label>
-  </p>
+      <li>
+        <label for="password">Password</label>
+        <input type="password" name="password">
+      </li>
 
-  <p>
-    <label>
-      Number of employees:
-      <input type="number" name="nb_of_employees">
-    </label>
-  </p>
+      <li>
+        <label for="nb_of_employees">Number of employees</label>
+        <input type="number" name="nb_of_employees">
+      </li>
 
-  {{#if errorMessage}}
-  <div class="error-message">{{errorMessage}}</div>
-  {{/if}}
+      <li>
+        <button type="submit">Sign Up</button>
+      </li>
 
-  <button type="submit">Sign Up</button>
-</form>
+      <li>
+        {{#if errorMessage}}
+        <div class="error-message">{{errorMessage}}</div>
+        {{/if}}
+      </li>
+    </ul>
+  </form>
 </div>
