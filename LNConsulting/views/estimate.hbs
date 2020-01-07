@@ -22,25 +22,28 @@
   </div>
 </div>
 
-<div><h2>GET A COST ESTIMATE FOR YOUR PROJECT</h2></div>
-
-<form action="/estimate" method="POST">
+<div class="form-field">
   <p>
-    <label>
-      Project name:
-      <input type="text" name="projectName">
-    </label>
+    GET A COST ESTIMATE FOR YOUR PROJECT
+    {{#if errorMessage}}
+    <div class="error-message">{{errorMessage}}</div>
+    {{/if}}  
   </p>
+  <form action="/estimate" method="POST">
+    <ul class="flex-outer">
+      <li>
+        <label for="projectName">Project name</label>  
+        <input type="text" name="projectName">    
+      </li>
 
-  <p>
-    <label>
-      Project description:
-      <textarea name="projectDescription"></textarea>
-      
-    </label>
-  </p>
+      <li>
+        <label for="projectDescription"> Project description</label>
+        <textarea rows="6" name="projectDescription"></textarea> 
+      </li>
 
-  <p>
-    <button>Get estimate</button>
-  </p>
-</form>
+      <li>
+        <button>Get estimate</button>
+      </li>
+    </ul>
+  </form>
+</div>

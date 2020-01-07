@@ -15,36 +15,36 @@ a {
 }
 
 .nav-bar img{
-  height:60px;
+  height:calc(3em + 1vw);
 }
 
 .nav-bar-ul {
   display:flex;
   margin-left:auto;
-  font-size:20px;
+  font-size:calc(0.3em + 1vw);
 
 }
 
 .nav-bar-li{
   display:inline;
   list-style-type: none;
-  margin-right:50px;
+  margin-right:calc(1.8em + 1vw);
   vertical-align: middle;
 }
 
 .nav-bar-li img {
-  height:50px;
+  height:calc(1.5em + 1vw);
 }
 
 .services {
   display:flex;
   color:dimgrey;
   text-align:center;
+  height:100%;
 }
 
 .services div {
   width:33%;
-  height:650px;
   border: 2px solid;
   border-color:rgb(155,39,53);
   margin-right:20px;
@@ -57,7 +57,7 @@ a {
 }
 
 .service-photo{
-  width:380px;
+  width:79%;
 }
 
 .footer{
@@ -81,7 +81,7 @@ a {
   z-index:1;
   background-color:#f1f1f1;
   width:200px;
-  font-size:20px;
+  font-size:calc(0.2em + 1vw);
 }
 
 .dropdown-content a {
@@ -180,6 +180,7 @@ input {
   margin-bottom:20px;
 }
 
+/* BI page - begin */
 .detail{
   display:flex;
 }
@@ -189,7 +190,9 @@ input {
   margin:0 auto;
   font-size:18px;
 }
+/* BI page - end */
 
+/* Training - begin */
 .lessons {
   display:flex;
   justify-content: space-evenly;
@@ -215,3 +218,75 @@ input {
 .lesson ol li {
   margin-bottom:20px;
 }
+/* Training - end */
+
+/* Internal Control - begin */
+.internal-control {
+  display:flex;
+}
+
+.internal-control-detail {
+  width:50%;
+}
+
+.internal-control-detail img {
+  max-width:100%;
+}
+
+.internal-control-detail h3 {
+  text-align:center;
+}
+
+.purchasing {
+  margin-bottom:100px;
+}
+/* Internal Control - end */
+
+/* Your account page - begin */
+.welcome-message {
+  text-align:right;
+  font-size:calc(0.3em + 1vw);
+  font-style:italic;
+  padding-right:calc(1.8em + 1vw);
+  color: #fff;
+  background-color: #767676;
+}
+
+.account-body{
+  background:#edecec;
+  height:100%;
+  padding:20px;
+}
+
+.account-part {
+  background:white;
+  padding:10px;
+}
+
+.account-part-title {
+  border-bottom:1px solid dimgray;
+}
+
+.account-part ul {
+  list-style-type:none;
+}
+
+.account-part ul li {
+  margin-bottom:10px;
+}
+
+.account-part ul li div {
+  background:#edecec;
+  height:50px;
+  display:flex;
+  align-items: center;
+}
+
+.account-part ul li div p {
+  flex: 1;
+}
+
+.hyper {
+  font-weight:bold;
+}
+/* Your account page - end */

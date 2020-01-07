@@ -22,16 +22,25 @@
   </div>
 </div>
 
-<h1>Welcome {{username}}</h1>
-<ul>
-  {{#each projects}}
-  <li>
-    <div>
-      <p>Project Name: {{project_name}}</p>
-      <p>Status: {{status}}</p>
-    </div>
-  {{else}}
-    <p>You don't have any project yet with us</p>
-  </li>
-  {{/each}}
-</ul>
+<div class="welcome-message">Welcome {{username}}</div>
+<div class="account-body">
+  <div class="account-part">
+    <div class="account-part-title">YOU CAN GET A NEW ESTIMATE <a href="/estimate"><span class="hyper">here</span></a></div>
+  </div>
+  <div class="account-part">
+    <div class="account-part-title">YOUR PROJECTS</div>
+    <ul>
+      {{#each projects}}
+      <li>
+        <div>
+          <p>{{project_name}}, Status: {{status}}</p>
+        </div>
+      {{else}}
+        <div>
+          <p>You don't have any project yet with us</p>
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+</div>

@@ -17,6 +17,11 @@ router.post('/estimate', function (req, res, next) {
     return next(new Error('You must be logged to request an estimate'));
   }
 
+  if (req.body.projectName === "" || req.body.projectDescription === "") {
+    res.render("estimate", { errorMessage: "Please indicate your project name and few details about your project" });
+    return;
+  }
+
   Project.create({
     project_name: req.body.projectName,
     project_description: req.body.projectDescription,
