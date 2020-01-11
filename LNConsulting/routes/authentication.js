@@ -104,10 +104,7 @@ router.post('/login', (req, res, next) => {
       // All good, we are now logged in and `req.user` is now set
       Project.find()
         .then((projects) => {
-          res.render('youraccount',{
-            projects:projects,
-            username:theUser.username
-          })
+          res.redirect('youraccount')
         })
         .catch(err => next(err))
       

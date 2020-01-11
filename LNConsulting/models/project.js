@@ -11,7 +11,11 @@ const ProjectSchema = Schema({
   status:{
     type:String,
     enum: ['Cost Estimate','Started', 'Interview', 'Development', 'Delivered']
-  }
+  },
+  comments:[{
+    content:String,
+    created_at:{ type: Date, default: Date.now }
+  }]
 });
 
 const Project = mongoose.model('Project', ProjectSchema);
