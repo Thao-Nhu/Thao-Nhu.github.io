@@ -258,7 +258,8 @@ input {
   width:70px;
   border-radius:50%;
   text-align: center;
-  background-color: white;
+  background-color:silver;
+  color:white;
   font-size: 10px;
   padding:35px 0;
   line-height:0;
@@ -266,7 +267,8 @@ input {
 }
 
 .project-status-active {
-  background-color: turquoise;
+  background-color: rgb(155,39,53);
+  color:white
 }
 
 .account-body{
@@ -311,6 +313,11 @@ input {
   margin-right:20px;
 }
 
+.consult-project form button {
+  font-size:14px;
+  margin-right:10px;
+}
+
 .project-detail-field {
   background:#edecec;
   padding:20px;
@@ -328,6 +335,16 @@ input {
 .project-details-flex-outer li {
   display: flex;
   flex-wrap: wrap;
+}
+
+.project-details-flex-outer li form {
+  margin-left: auto;
+  margin-right:10px;
+}
+
+.project-details-flex-outer li form button {
+  font-size:15px;
+  border-radius: 10px;
 }
 
 
@@ -392,21 +409,50 @@ input {
   padding:10px;
   border-radius:10px;
   margin-right:10px;
-  margin-top:0px;
-  margin-bottom:10px;
 }
 
 .comment-flex-outer li button {
   margin-left: auto;
   margin-right:10px;
-  padding: 8px 16px;
+  padding: 8px;
   border: none;
   background: #333;
   color: #f2f2f2;
   text-transform: uppercase;
-  letter-spacing: .09em;
   border-radius: 2px;
-  font-size:16px;
+  font-size:12px;
 }
 
 /* Your account page - end */
+
+/* About us page - start */
+.slogan {
+  margin:0 auto;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  width:750px;
+  height:100px;
+  font-size:20px;
+  color:white;
+  background:dimgray;
+}
+
+.slogan p {
+  margin:0 auto;
+}
+
+.slogan-detail {
+  width:750px;
+  font-size:20px;
+  margin:0 auto;
+  margin-top: 20px;
+  text-align: justify;
+  border:1px solid;
+  border-radius:10px;
+}
+
+.slogan-detail p {
+  padding:20px;
+}
+/* About us page - end*/

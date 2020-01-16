@@ -14,8 +14,8 @@
           </div>
       </li>
       <li class="nav-bar-li"><a href="/estimate">Estimate</a></li>
-      <li class="nav-bar-li"><a href="/youraccount">Your account</a></li>
-      <li class="nav-bar-li">About us</li>
+      <!--<li class="nav-bar-li"><a href="/youraccount">Your account</a></li>-->
+      <li class="nav-bar-li"><a href="/aboutus">About us</a></li>
       <li class="nav-bar-li"><a href="/login"><img src="/images/icons8-user-50.png" alt="login"></a></li>  
       <li class="nav-bar-li"><a href="/logout"><img src="/images/icons8-sign-out-64.png" alt="sign out"></a></li>   
     </ul>
@@ -36,9 +36,11 @@
           <p>{{project_name}}, Status: {{status}}</p>
           <div class="consult-project">
             <p style="text-decoration: underline;"><a href="/youraccount/{{_id}}">Details</a></p>
+            <!--
             <form action="/youraccount/{{_id}}/delete" method="POST"> 
               <button type="submit">Delete</button>
             </form>
+            -->
           </div>
         </div>
       {{else}}

@@ -68,13 +68,7 @@ router.post("/signup", (req, res, next) => {
 
 router.get('/login', (req, res) => {
   if (req.user) {
-    Project.find().then(function(projects){
-      console.log("My projects in the database are",projects)
-      res.render('youraccount', {
-        projects:projects,
-        username: req.user.username
-      });
-    }).catch( err => console.error(err));
+    res.redirect('youraccount');
   } else {
     res.render('authentication/login', { message: req.flash('error')});
   } 

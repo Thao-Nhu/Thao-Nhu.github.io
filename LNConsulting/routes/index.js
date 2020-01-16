@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose')
 const router  = express.Router();
 const Project = require('../models/project.js');
+const Comment= require('../models/comment.js');
 
 /* GET home page */
 router.get('/', (req, res, next) => {
@@ -9,12 +10,12 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/youraccount', (req, res, next) => {
-  const userId=req.user._id;
   if (!req.user) {
     res.render('authentication/login',{accountErrorMessage: 'Please log in to see your account'});
     return;
     }
 
+  const userId=req.user._id;
 
   Project.find({
     "company_id":{
@@ -34,6 +35,7 @@ router.get('/youraccount', (req, res, next) => {
 
 router.get('/youraccount/:id',function(req,res,next){
   Project.findById({_id:req.params.id})
+  .populate('comments')
   .then(function(project){
 
     project.comments.forEach(comment => {
@@ -66,13 +68,26 @@ router.post('/youraccount/:id', function (req, res, next) {
   if (!req.user) return next(new Error('You must be logged to create a comment'));
 
   const id = req.params.id;
-
-  Project.update({ _id: id }, { $push: { comments: {content:req.body.comments}}})
-    .then(project => {
-      res.redirect(`/youraccount/${id}`);
+  Comment.create({
+    content:req.body.comments,
+    project_id:id,
+    user_id:req.user._id
+  })
+    .then(comment => {
+      Project.update({ _id: id }, { $push: { comments: comment._id}})
+        .then(project => res.redirect(`/youraccount/${id}`))
+        .catch(next)
     })
-    .catch(next)
-  ;
-})
+    .catch(next)})
+
+router.post('/youraccount/comments/:id/delete', function(req,res,next){
+  Comment.findByIdAndRemove(req.params.id)
+  .then(function(comment){
+    Project.update({_id:comment.project_id},{$pull: {comments:comment._id}})
+      .then(project => res.redirect(`/youraccount/${comment.project_id}`))
+      .catch(err => next(err))
+  })
+  .catch(err => next(err))})
+
 
 module.exports = router;

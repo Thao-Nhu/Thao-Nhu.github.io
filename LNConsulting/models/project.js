@@ -12,10 +12,7 @@ const ProjectSchema = Schema({
     type:String,
     enum: ['Cost Estimate','Started', 'Interview', 'Development', 'Delivered']
   },
-  comments:[{
-    content:String,
-    created_at:{ type: Date, default: Date.now }
-  }]
+  comments:[{type: Schema.Types.ObjectId, ref: 'Comment'}]
 });
 
 const Project = mongoose.model('Project', ProjectSchema);

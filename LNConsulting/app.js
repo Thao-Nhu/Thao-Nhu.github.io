@@ -113,4 +113,7 @@ app.use('/', authRoutes);
 const estimateRoute = require('./routes/estimate');
 app.use('/', estimateRoute);
 
+const aboutusRoute = require('./routes/aboutus');
+app.use('/', aboutusRoute);
+
 module.exports = app;
