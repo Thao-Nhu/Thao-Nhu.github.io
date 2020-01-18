@@ -307,6 +307,7 @@ input {
 
 .hyper {
   font-weight:bold;
+  color:rgb(155,39,53);
 }
 
 .consult-project p {
@@ -456,3 +457,36 @@ input {
   padding:20px;
 }
 /* About us page - end*/
+
+/* Our location page - start*/
+.ourlocation {
+  background: url(../images/puteaux.jpeg);
+  background-size: cover;
+  height:100vh;
+  font-size:20px;
+  text-align: center;
+  padding:20px;
+}
+/* Our location page - end*/
+
+/* Contact us page - start*/
+.contactus {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  font-size:20px;
+  background: url(../images/data.jpeg);
+  background-size: cover;
+  height:100vh;
+  font-weight: bold;;
+}
+
+.contactus p {
+  background-color:white;
+  padding:20px;
+  height:100px;
+  width: 800px;
+  border-radius:20px;
+}
+/* Contact us page - end*/

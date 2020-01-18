@@ -116,4 +116,10 @@ app.use('/', estimateRoute);
 const aboutusRoute = require('./routes/aboutus');
 app.use('/', aboutusRoute);
 
+const ourlocationRoute = require('./routes/ourlocation');
+app.use('/', ourlocationRoute);
+
+const contactusRoute = require('./routes/contactus');
+app.use('/', contactusRoute);
+
 module.exports = app;
